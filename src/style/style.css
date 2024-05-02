@@ -141,6 +141,13 @@ body {
     width: 100%;
   }
 }
+@media (max-width: 478px) {
+  .landingmain .content .sides:nth-child(1) .headercontent:nth-child(1) h1 {
+    line-height: 24px !important;
+    width: 100%;
+    font-size: 25px !important;
+  }
+}
 .landingmain .content .sides:nth-child(1) .headercontent:nth-child(2) {
   position: relative;
   flex: 1.2;
@@ -170,7 +177,21 @@ body {
   opacity: 0.6;
   animation: spin 57s linear infinite; /* Adjust the duration (5s) and timing function (linear) as needed */
 }
+@media (max-width: 478px) {
+  .landingmain .content .sides:nth-child(1) .headercontent:nth-child(2) .profile_img {
+    width: 100%;
+  }
+}
 .landingmain .content .sides:nth-child(2) {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row;
+  height: 100%;
+  width: 100%;
+}
+.landingmain .content .sides:nth-child(2) .vertex {
   flex: 1;
 }
 @media (max-width: 796px) {
@@ -215,11 +236,11 @@ body {
   .landingmain .content .sides:nth-child(1) .headercontent:nth-child(1) h1 {
     width: 100%;
     line-height: 40px;
-    font-size: 40px;
+    font-size: 35px;
     text-align: center;
   }
   .landingmain .content .sides:nth-child(1) .headercontent:nth-child(1) p {
-    width: 70%;
+    width: 100%;
   }
   .landingmain .content .sides:nth-child(1) .headercontent:nth-child(2) {
     flex: 1;

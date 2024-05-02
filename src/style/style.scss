@@ -177,6 +177,13 @@ body{
                         width:100%;
                     }
                 }
+                @media (max-width:478px) {
+                    h1{
+                        line-height:24px !important;
+                        width: 100%;
+                        font-size:25px !important;
+                    }
+                }
                 
             }
             .headercontent:nth-child(2){
@@ -216,11 +223,36 @@ body{
    
                 }
                 padding:10px;
+
+                @media (max-width:478px) {
+                    .profile_img{
+                        width: 100%;
+                    }
+                }
             }
         }
 
         .sides:nth-child(2){
             flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-flow: row;
+            height:100%;
+            width:100%;
+
+            .vertex{
+                flex:1;
+            }
+
+            .vertex:nth-child(1){
+                
+            }
+
+            .vertex:nth-child(2){
+                
+            }
+
         }
     }
 
@@ -286,11 +318,11 @@ body{
                     h1{
                         width:100%;
                         line-height:40px;
-                        font-size: 40px;
+                        font-size: 35px;
                         text-align:center;
                     }
                     p{
-                        width:70%;
+                        width:100%;
                     }
                 }
 
@@ -353,3 +385,7 @@ body{
         }
     }
 }
+
+
+
+ 
