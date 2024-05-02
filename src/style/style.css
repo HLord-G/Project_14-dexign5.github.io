@@ -136,6 +136,11 @@ body {
     line-height: 50px;
   }
 }
+@media (max-width: 535px) {
+  .landingmain .content .sides:nth-child(1) .headercontent:nth-child(1) p {
+    width: 100%;
+  }
+}
 .landingmain .content .sides:nth-child(1) .headercontent:nth-child(2) {
   position: relative;
   flex: 1.2;
@@ -214,7 +219,7 @@ body {
     text-align: center;
   }
   .landingmain .content .sides:nth-child(1) .headercontent:nth-child(1) p {
-    width: 100%;
+    width: 70%;
   }
   .landingmain .content .sides:nth-child(1) .headercontent:nth-child(2) {
     flex: 1;
@@ -234,7 +239,7 @@ body {
   }
   .landingmain .content .sides:nth-child(1) .headercontent:nth-child(2) .profile_img .circle {
     position: absolute;
-    top: 0px;
+    top: 30px;
     left: -40px;
     width: 140px;
     height: 140px;

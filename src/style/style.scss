@@ -171,6 +171,13 @@ body{
                         line-height:50px;
                     }
                 }
+                
+                @media (max-width:535px) {
+                    p{
+                        width:100%;
+                    }
+                }
+                
             }
             .headercontent:nth-child(2){
 
@@ -283,8 +290,7 @@ body{
                         text-align:center;
                     }
                     p{
-                        width:100%;
-                        // display:none;
+                        width:70%;
                     }
                 }
 
@@ -306,7 +312,7 @@ body{
 
                         .circle {
                             position: absolute;
-                            top: 0px;
+                            top: 30px;
                             left: -40px;
                             width: 140px;
                             height: 140px;
