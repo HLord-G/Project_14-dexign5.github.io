@@ -97,11 +97,17 @@ body {
   flex-flow: column;
   height: 100%;
   width: 100%;
+  margin-top: 20px;
 }
 .landingmain .content .sides {
   width: 100%;
   height: 100%;
   padding: 0px 0px 0px 100px;
+}
+@media (max-width: 1116px) {
+  .landingmain .content .sides {
+    padding: 0px;
+  }
 }
 .landingmain .content .sides:nth-child(1) {
   flex: 2;
@@ -183,16 +189,129 @@ body {
   }
 }
 .landingmain .content .sides:nth-child(2) {
+  margin-top: 30px;
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row;
-  height: 100%;
+  width: 100%;
+  gap: 20px;
+}
+.landingmain .content .sides:nth-child(2) .vertex:nth-child(1) {
+  flex: 1.5;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-flow: row;
+  gap: 10px;
+}
+.landingmain .content .sides:nth-child(2) .vertex:nth-child(1) .boxs {
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.219);
+  flex: 1;
+  height: 200px;
+  width: 190.5px;
+  border-radius: 0px 20px 0px 20px;
+  overflow: hidden;
+  color: black;
+}
+.landingmain .content .sides:nth-child(2) .vertex:nth-child(1) .boxs .box_inside {
+  height: 10px;
   width: 100%;
 }
-.landingmain .content .sides:nth-child(2) .vertex {
+.landingmain .content .sides:nth-child(2) .vertex:nth-child(1) .boxs h1 {
+  font-family: "Vogue";
+  font-weight: bold;
+  margin-top: 10px;
+  padding: 10px 10px 0px 10px;
+}
+.landingmain .content .sides:nth-child(2) .vertex:nth-child(1) .boxs h1 span {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.landingmain .content .sides:nth-child(2) .vertex:nth-child(1) .boxs p {
+  margin-top: 5px;
+  padding: 0px 10px 0px 10px;
+  font-size: smaller;
+}
+.landingmain .content .sides:nth-child(2) .vertex:nth-child(1) .boxs:nth-child(1) {
+  background-color: #feb066;
+  animation-delay: 100ms; /* Delay in milliseconds */
+}
+.landingmain .content .sides:nth-child(2) .vertex:nth-child(1) .boxs:nth-child(2) {
+  background-color: ghostwhite;
+  animation-delay: 520ms; /* Delay in milliseconds */
+}
+.landingmain .content .sides:nth-child(2) .vertex:nth-child(1) .boxs:nth-child(3) {
+  background-color: ghostwhite;
+  animation-delay: 1130ms; /* Delay in milliseconds */
+}
+@media (max-width: 684px) {
+  .landingmain .content .sides:nth-child(2) .vertex:nth-child(1) {
+    flex-flow: column;
+  }
+  .landingmain .content .sides:nth-child(2) .vertex:nth-child(1) .boxs {
+    width: 100%;
+    padding: 10px;
+  }
+  .landingmain .content .sides:nth-child(2) .vertex:nth-child(1) .boxs p {
+    font-size: smaller;
+    margin-bottom: 20px;
+  }
+}
+.landingmain .content .sides:nth-child(2) .vertex:nth-child(2) {
   flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-flow: column;
+  width: 100%;
+  padding: 30px;
+}
+.landingmain .content .sides:nth-child(2) .vertex:nth-child(2) p {
+  font-size: smaller;
+  padding: 20px;
+}
+.landingmain .content .sides:nth-child(2) .vertex:nth-child(2) .subs {
+  border-radius: 10px;
+  padding: 1px;
+  width: 80%;
+  background-color: #feb066;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-flow: row;
+}
+.landingmain .content .sides:nth-child(2) .vertex:nth-child(2) .subs input {
+  border-radius: 10px;
+  padding: 4px 10px;
+  background-color: #16433f;
+  width: 100%;
+}
+.landingmain .content .sides:nth-child(2) .vertex:nth-child(2) .subs .subms {
+  color: #16433f;
+}
+@media (max-width: 554px) {
+  .landingmain .content .sides:nth-child(2) .vertex:nth-child(2) {
+    width: 100%;
+    padding: 10px;
+  }
+  .landingmain .content .sides:nth-child(2) .vertex:nth-child(2) p {
+    width: 100%;
+    text-align: center;
+  }
+}
+@media (max-width: 1116px) {
+  .landingmain .content .sides:nth-child(2) {
+    flex-flow: column;
+    justify-content: center;
+  }
+  .landingmain .content .sides:nth-child(2) .vertex {
+    width: 100%;
+  }
 }
 @media (max-width: 796px) {
   .landingmain .navs .menu {
@@ -284,7 +403,7 @@ body {
     top: 30px;
     left: 10px;
     font-size: 35px;
-    font-family: "Astral_Studio";
+    font-family: "e";
     z-index: 9;
   }
 }/*# sourceMappingURL=style.css.map */
