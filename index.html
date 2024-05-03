@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>LaShaun Shanae Business Coaching</title>
+
+    
+
     <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
@@ -16,15 +19,66 @@
     <link rel="stylesheet" href="src/style/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
-
+    <style>
+        .progressload {
+           width: 100.8px;
+           height: 16.8px;
+           background: linear-gradient(#feb066 50%,#0000 0),
+                linear-gradient(#0000 50%,#feb066 0),
+                linear-gradient(#feb066 50%,#0000 0),
+                linear-gradient(#0000 50%,#feb066 0),
+                linear-gradient(#feb066 50%,#0000 0),
+                linear-gradient(#0000 50%,#feb066 0)
+                #dbdcef;
+           background-size: calc(100%/6 + 1px) 200%;
+           background-repeat: no-repeat;
+           animation: progress-qh65fe 2s infinite;
+        }
+        
+        @keyframes progress-qh65fe {
+           0% {
+              background-position: 0% 100%, 20%   0%, 40% 100%, 60%   0%, 80% 100%, 100%   0%;
+           }
+        
+           16.67% {
+              background-position: 0%   0%, 20%   0%, 40% 100%, 60%   0%, 80% 100%, 100%   0%;
+           }
+        
+           33.33% {
+              background-position: 0%   0%, 20% 100%, 40% 100%, 60%   0%, 80% 100%, 100%   0%;
+           }
+        
+           50% {
+              background-position: 0%   0%, 20% 100%, 40%   0%, 60%   0%, 80% 100%, 100%   0%;
+           }
+        
+           66.67% {
+              background-position: 0%   0%, 20% 100%, 40%   0%, 60% 100%, 80% 100%, 100%   0%;
+           }
+        
+           83.33% {
+              background-position: 0%   0%, 20% 100%, 40%   0%, 60% 100%, 80%   0%, 100%   0%;
+           }
+        
+           100% {
+              background-position: 0%   0%, 20% 100%, 40%   0%, 60% 100%, 80%   0%, 100% 100%;
+           }
+        }
+        </style>
 
 </head>
 <body>
-    
+    <div id="loadings">
+        <div id="loading-text">
+            <div class="progressload"></div>
+            <small>Harold Style:</small>
 
-        <div class="popup">
-                <img src="src/img/adsa.jpg" id="ads" alt="">
         </div>
+    </div>
+
+    <div class="popup">
+            <img src="src/img/adsa.jpg" class="animate__animated animate__bounceInDown animate__delay-0.1s" id="ads" alt="">
+    </div>
 
 
 
@@ -60,7 +114,7 @@
                 </div>
                 <div class="headercontent">
 
-                    <div class="profile_img">
+                    <div class="profile_img animate__animated animate__fadeInDown animate__delay-1s" >
                         <div class="circle"></div>
                     </div>
                     
@@ -92,9 +146,11 @@
                 <div class="vertex">
 
                    <p>
-                    At LaShaun Shanae Business Coaching, we provide personalized guidance, collaborative learning, and ongoing support tailored to your needs for success.</p>
+                   <span class="quot"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-quote" viewBox="0 0 16 16">
+                    <path d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388q0-.527.062-1.054.093-.558.31-.992t.559-.683q.34-.279.868-.279V3q-.868 0-1.52.372a3.3 3.3 0 0 0-1.085.992 4.9 4.9 0 0 0-.62 1.458A7.7 7.7 0 0 0 9 7.558V11a1 1 0 0 0 1 1zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612q0-.527.062-1.054.094-.558.31-.992.217-.434.559-.683.34-.279.868-.279V3q-.868 0-1.52.372a3.3 3.3 0 0 0-1.085.992 4.9 4.9 0 0 0-.62 1.458A7.7 7.7 0 0 0 3 7.558V11a1 1 0 0 0 1 1z"/>
+                  </svg></span>At LaShaun Shanae Business Coaching, we provide personalized guidance, collaborative learning, and ongoing support tailored to your needs for success.</p>
 
-
+ 
                     <div class="subs">
                         <input type="text" placeholder="Subscribe For Lates News"> 
                         <div class="subms">
@@ -115,10 +171,56 @@
 
 
 
-    <div class="vdke" style="height:100vh;"></div>
     
 </body>
 </html>
 
-
 <script src="src/script/apps.js"> </script>
+
+<!-- Load First -->
+<script> 
+const imageUrls = [
+    'src/img/background.jpg',
+    'src/img/ads.jpg',
+    'src/img/circle.png',
+    'src/img/icons_ye.png',
+    'src/img/profile.png'
+];
+
+function preloadImages(urls) {
+    const promises = [];
+    for (const url of urls) {
+        const img = new Image();
+        const promise = new Promise((resolve, reject) => {
+            img.onload = resolve;
+            img.onerror = reject;
+        });
+        img.src = url;
+        promises.push(promise);
+    }
+    return Promise.all(promises);
+}
+
+preloadImages(imageUrls)
+    .then(() => {
+        console.log('All images preloaded');
+        // popup ads timer
+            $("#loadings").hide()
+
+            adspopup(8)
+            // menu animation timer
+            menuAnimations(1000, 400)
+            // icon animation 
+            animation_icon_timer(1000)
+            // button animation
+            button_animation_timer(1000)
+
+            $(".landingmain").show()
+
+    })
+    .catch(error => {
+        console.error('Error preloading images:', error);
+        window.location.reload();
+    });
+
+</script>
