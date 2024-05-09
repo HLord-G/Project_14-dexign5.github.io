@@ -1,3 +1,12 @@
+adspopup(8)
+// menu animation timer
+menuAnimations(1000, 400)
+// icon animation 
+animation_icon_timer(1000)
+// button animation
+button_animation_timer(1000)
+
+$(".landingmain").show()
 
 
 
